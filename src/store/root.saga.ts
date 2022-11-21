@@ -1,4 +1,4 @@
-import {all,  call} from 'typed-redux-saga/macro';
+import {all} from 'typed-redux-saga/macro';
 
 import { siteSagas} from './site/site.saga';
 
