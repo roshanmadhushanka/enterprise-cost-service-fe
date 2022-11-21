@@ -2,7 +2,7 @@ import axios from 'axios';
 import {HttpMethod} from '../api.type';
 import {Site} from '../../../store/site/site.type';
 
-const BASE_URL = 'http://localhost/sites';
+const BASE_URL = 'http://localhost:4000/sites';
 
 class SiteApi {
 

@@ -1,17 +1,17 @@
-import { FC } from 'react';
-// import {Checkbox, Input} from 'antd';
-// import Select from 'react-select';
-
+import {useEffect} from 'react';
+import {useDispatch} from 'react-redux';
 import 'antd/dist/antd.min.css';
-import { Site } from '../../store/site/site.type';
-// import {SearchFormContainer, SearchBoxContainer, SearchBoxLabel} from './search.styles';
 
-type SearchProps = {
-    sites: Site[]
-}
+import {fetchSiteStart} from '../../store/site/site.action';
 
-const Search: FC<SearchProps> = ({ sites}) => {
-    return(
+const Search = () => {
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(fetchSiteStart());
+    }, [dispatch]);
+
+    return (
         <div>
             <h2>Hello</h2>
         </div>
