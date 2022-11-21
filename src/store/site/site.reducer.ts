@@ -1,6 +1,6 @@
 import {AnyAction} from 'redux';
 
-import {fetchSiteStart, fetchSiteSuccess, fetchSiteFailed} from '../site/site.action';
+import {fetchSiteStart, fetchSiteSuccess, fetchSiteFailed} from './site.action';
 
 export type SiteState = {
     readonly sites: [],
