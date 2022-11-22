@@ -5,6 +5,7 @@ import 'antd/dist/antd.min.css';
 
 import {fetchSiteStart} from '../../store/site/site.action';
 import {selectSites} from '../../store/site/site.selector';
+import {SearchBoxContainer, SearchBoxLabel, SearchFormContainer} from "./search.styles";
 
 const Search = () => {
     const dispatch = useDispatch();
@@ -16,16 +17,19 @@ const Search = () => {
     const sites = useSelector(selectSites).map(site => ({id: site['id'], label:  site['name']}));
 
     return (
-        <div>
-            <h2>Hello</h2>
-            <Select
-                showSearch
-                style={{ width: 200 }}
-                placeholder="Search to Select"
-                optionFilterProp="children"
-                filterOption={(input, option) => (option?.label ?? '').includes(input)}
-                options={sites}/>
-        </div>
+        <SearchFormContainer>
+            <SearchBoxContainer>
+                <SearchBoxLabel>Site</SearchBoxLabel>
+                <Select
+                    showSearch
+                    style={{ width: 250 }}
+                    placeholder="Search to Select"
+                    optionFilterProp="children"
+                    filterOption={(input, option) => (option?.label ?? '').includes(input)}
+                    options={sites}
+                />
+            </SearchBoxContainer>
+        </SearchFormContainer>
     );
 }
 

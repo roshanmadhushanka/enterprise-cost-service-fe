@@ -11,7 +11,7 @@ const Home = () => {
     return (
         <>
             <Layout>
-                <Sider width={400} style={{ background: '#fff',minHeight: '100vh', color: 'white' }}>
+                <Sider width={300} style={{ background: '#fff',minHeight: '100vh', color: 'white' }}>
                     <Search/>
                 </Sider>
                 <Layout>
